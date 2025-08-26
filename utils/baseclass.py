@@ -17,3 +17,13 @@ class BaseClass:
         url = f"{self.BASE_URL}/{endpoint}"
         response = requests.post(url, headers=self.header, json = data)
         return response
+
+    def put(self, endpoint, data):
+        url = f"{self.BASE_URL}/{endpoint}"
+        response = requests.put(url, headers=self.header, json=data)
+        return response
+
+    def delete(self, endpoint):
+        url = f"{self.BASE_URL}/{endpoint}"
+        response = requests.delete(url, headers=self.header)
+        return response
