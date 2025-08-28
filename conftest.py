@@ -23,10 +23,18 @@ def load_test_data():
         data = json.load(json_file)
     return data
 
-user_details = [
-    {"name": "subhash", "username": "developer", "email": "subhash123@gmail.com"},
-    {"name": "madhubashini", "username": "developer", "email": "madhubhashini123@gmail.com"}
-]
+# user_details = [
+#     {"name": "subhash", "username": "developer", "email": "subhash123@gmail.com"},
+#     {"name": "madhubashini", "username": "developer", "email": "madhubhashini123@gmail.com"}
+# ]
+
+def pytest_generate_tests(metafunc):
+    if "user_details" in metafunc.fixturenames:
+        json_file_path = os.path.join(os.path.dirname(__file__), "data", "create_user_data.json")
+        with open(json_file_path) as json_file:
+            data = json.load(json_file)
+            test_data = data["create_user_details"]
+        metafunc.parametrize("user_details", test_data)
 
 
 
