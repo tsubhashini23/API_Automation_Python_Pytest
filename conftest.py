@@ -3,9 +3,6 @@ import json
 import pytest
 from datetime import datetime
 
-import requests
-
-
 @pytest.hookimpl(tryfirst=True)
 def pytest_configure(config):
     report_dir = "reports"

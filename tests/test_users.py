@@ -15,11 +15,6 @@ def test_get_users(obj):
 
 @pytest.mark.parametrize("user_data", user_details)
 def test_create_user(obj, user_data):
-    # user_data = {
-    #     "name": "king",
-    #     "username": "developer",
-    #     "email": "king123@gmail.com"
-    # }
     response = obj.post("users", user_data)
     print(response.json())
     assert response.status_code == 201
