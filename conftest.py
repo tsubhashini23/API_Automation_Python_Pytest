@@ -26,6 +26,13 @@ def load_test_data():
         data = json.load(json_file)
     return data
 
+user_details = [
+    {"name": "subhash", "username": "developer", "email": "subhash123@gmail.com"},
+    {"name": "madhubashini", "username": "developer", "email": "madhubhashini123@gmail.com"}
+]
+
+
+
 
 
 

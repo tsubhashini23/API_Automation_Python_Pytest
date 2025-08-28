@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a98ca2d6-f69e-442c-bc52-b1d76f584700" name="Changes" comment="Included post method">
-      <change afterPath="$PROJECT_DIR$/data/test_data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/report_2025-08-26_16-59-29.html" afterDir="false" />
+    <list default="true" id="a98ca2d6-f69e-442c-bc52-b1d76f584700" name="Changes" comment="Load data using external file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/test_data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_users.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_users.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/baseclass.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/baseclass.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +85,8 @@
       <workItem from="1755755252540" duration="11151000" />
       <workItem from="1755929691707" duration="2297000" />
       <workItem from="1756104488624" duration="8188000" />
-      <workItem from="1756188551900" duration="5217000" />
+      <workItem from="1756188551900" duration="6960000" />
+      <workItem from="1756361463266" duration="2837000" />
     </task>
     <task id="LOCAL-00001" summary="pytest implementation">
       <option name="closed" value="true" />
@@ -113,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756110647753</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Load data using external file">
+      <option name="closed" value="true" />
+      <created>1756208200203</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756208200203</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,18 +141,8 @@
     <MESSAGE value="pytest implementation" />
     <MESSAGE value="pytest implementation updated" />
     <MESSAGE value="Included post method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Included post method" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/test_users.py</url>
-          <line>12</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Load data using external file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Load data using external file" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Python_Requests_Pytest$.coverage" NAME=" Coverage Results" MODIFIED="1756115343092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

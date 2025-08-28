@@ -1,5 +1,6 @@
 import pytest
 from utils.baseclass import BaseClass
+from conftest import user_details
 
 @pytest.fixture(scope="module")
 def obj():
@@ -12,20 +13,20 @@ def test_get_users(obj):
   assert len(response.json()) > 0
   assert response.elapsed.total_seconds() < 1
 
-def test_create_user(obj, load_test_data):
+@pytest.mark.parametrize("user_data", user_details)
+def test_create_user(obj, user_data):
     # user_data = {
     #     "name": "king",
     #     "username": "developer",
     #     "email": "king123@gmail.com"
     # }
-    user_data = load_test_data["create_user_details"]
     response = obj.post("users", user_data)
     print(response.json())
     assert response.status_code == 201
     assert response.elapsed.total_seconds() < 1
-    assert response.json()["name"] == "Madhu"
-    # id = response.json()["id"]
-    # get_response = obj.get(f"users/{id}")
+    assert response.json()["name"] == user_data["name"]
+    id = response.json()["id"]
+    get_response = obj.get(f"users/{id}")
     get_response = obj.get(f"users/10")
     print(get_response .json())
     assert get_response.status_code == 200
