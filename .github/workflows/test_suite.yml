@@ -1,5 +1,4 @@
 name: Test Suite
-
 on:
  push:
   branches:
