@@ -29,7 +29,10 @@ jobs:
       - name: Run tests
         run: |
          pytest -s -v --html=reports/report.html --self-contained-html
-       
+
+      - name: Verify reports folder
+        run: ls -R reports      
+
       - name: upload reports
         uses: actions/upload-artifact@v4
         with:
