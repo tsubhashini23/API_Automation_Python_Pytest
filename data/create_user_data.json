@@ -1,0 +1,15 @@
+{
+    "create_user_details":
+    [
+              {
+        "name": "latha",
+        "username": "developer",
+        "email": "latha123@gmail.com"
+    },
+      {
+        "name": "kala",
+        "username": "tester",
+        "email": "kala123@gmail.com"
+    }
+    ]
+}
