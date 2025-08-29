@@ -1,4 +1,4 @@
-orts/name: Test Suite
+name: Test Suite
 on:
  workflow_dispatch:
  push:
@@ -28,10 +28,10 @@ jobs:
 
       - name: Run tests
         run: |
-         pytest -s -v --html=report.html --self-contained-html
+         pytest -s -v --html=reports/report.html --self-contained-html
        
       - name: upload reports
         uses: actions/upload-artifact@v4
         with:
          name: pytest-report
-         path: report.html
+         path: reports/report.html
