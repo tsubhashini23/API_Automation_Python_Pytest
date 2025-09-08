@@ -55,4 +55,17 @@ jobs:
       - name: Run tests
         run: |
           echo "Running in ${{ github.event.inputs.environment }} environment"
-          mkdir -p re
+          mkdir -p reports
+          pytest -s -v -m "${{ github.event.inputs.marker }}" \
+            --html=reports/report_${{ github.event.inputs.environment }}.html \
+            --self-contained-html \
+            --env=${{ github.event.inputs.environment }}
+
+      - name: Verify reports folder
+        run: ls -R reports
+
+      - name: Upload reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: pytest-report
+          path: reports/*.html
