@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a98ca2d6-f69e-442c-bc52-b1d76f584700" name="Changes" comment="Included a json file. Trigger github actions workflow">
       <change beforePath="$PROJECT_DIR$/.github/workflows/test_suite.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test_suite.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Python_Requests_Pytest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/API_Automation_Python.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_users.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_users.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +100,7 @@
       <workItem from="1757074729202" duration="388000" />
       <workItem from="1757075127214" duration="7378000" />
       <workItem from="1757082584701" duration="1041000" />
-      <workItem from="1757331641083" duration="2023000" />
+      <workItem from="1757331641083" duration="3779000" />
     </task>
     <task id="LOCAL-00001" summary="pytest implementation">
       <option name="closed" value="true" />
@@ -173,7 +166,23 @@
       <option name="project" value="LOCAL" />
       <updated>1756472250136</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Included a json file. Trigger github actions workflow">
+      <option name="closed" value="true" />
+      <created>1757333724270</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1757333724270</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Included a json file. Trigger github actions workflow">
+      <option name="closed" value="true" />
+      <created>1757334074387</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1757334074387</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
