@@ -9,11 +9,11 @@ on:
    -master
  # schedule:
    # - cron: '1 * * * *'
-   
+
 jobs:
   run-tests:
     runs-on: ubuntu-latest
-   
+
     steps:
       - name: Chechout code
         uses: actions/checkout@v4
@@ -28,13 +28,13 @@ jobs:
          python -m pip install --upgrade pip
          pip install -r requirements.txt
 
-      - name: Run tests
+      - name: Run smoke tests
         run: |
          mkdir -p reports
-         pytest -s -v --html=reports/report.html --self-contained-html
+         pytest -s -v -m smoke --html=reports/report.html --self-contained-html
 
       - name: Verify reports folder
-        run: ls -R reports      
+        run: ls -R reports
 
       - name: upload reports
         uses: actions/upload-artifact@v4

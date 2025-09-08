@@ -1,11 +1,12 @@
 import pytest
 from utils.baseclass import BaseClass
-# from conftest import user_details
+
 
 @pytest.fixture(scope="module")
 def obj():
   return BaseClass()
 
+@pytest.mark.smoke
 def test_get_users(obj):
   response = obj.get("users")
   # print(response.json())
@@ -14,6 +15,7 @@ def test_get_users(obj):
   assert response.elapsed.total_seconds() < 1
 
 # @pytest.mark.parametrize("user_data", user_details)
+@pytest.mark.smoke
 def test_create_user(obj, user_details):
     response = obj.post("users", user_details)
     print(response.json())
