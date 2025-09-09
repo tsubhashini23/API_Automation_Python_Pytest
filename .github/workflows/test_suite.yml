@@ -1,58 +1,43 @@
 name: Test Suite
-
 on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: "Environment"
-        required: true
-        default: test
-        type: choice
-        options:
-          - dev
-          - test
-          - staging
-          - production
-      marker:
-        description: "Marker"
-        required: true
-        default: all
-        type: choice
-        options:
-          - all
-          - smoke
-          - regression
-
-  push:
-    branches:
-      - master
-
-  pull_request:
-    branches:
-      - master
-
-  # schedule:
-  #   - cron: '1 * * * *'
+ workflow_dispatch:
+ push:
+  branches:
+   -master
+ pull_request:
+  branches:
+   -master
+ # schedule:
+   # - cron: '1 * * * *'
 
 jobs:
   run-tests:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Chechout code
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: set up python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+         python-version: '3.9.23'
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+         python -m pip install --upgrade pip
+         pip install -r requirements.txt
 
       - name: Run tests
         run: |
-          echo "Running in ${{ github.event.inputs.environment }} environment"
-          mkdir -p re
+         mkdir -p reports
+         pytest -s -v --html=reports/report.html --self-contained-html
+
+      - name: Verify reports folder
+        run: ls -R reports
+
+      - name: upload reports
+        uses: actions/upload-artifact@v4
+        with:
+         name: pytest-report
+         path: reports/*.html
